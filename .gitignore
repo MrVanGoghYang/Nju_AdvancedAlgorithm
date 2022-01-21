@@ -23,4 +23,7 @@
 hs_err_pid*
 
 # out file
-out/*
+/out/*
+
+# idea file
+/.idea
