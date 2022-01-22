@@ -1,4 +1,4 @@
-package algorithm_1_6;
+package problem_1_6;
 /**
  *描述
  * There are Infinite People Standing in a row, indexed from 1.

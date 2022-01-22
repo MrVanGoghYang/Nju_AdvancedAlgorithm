@@ -1,31 +1,35 @@
-package algorithm_1_8;
+package problem_1_7;
 /**
  * 描述
- * Implement pow(A, B) % C.In other words, given A, B and C, find (A^B)%C
+ * Given a Complete Binary tree, print the level order traversal in sorted order.
  *
  * 输入
- * The first line of input consists number of the test cases. The following T lines consist of 3 numbers each separated
- * by a space and in the following order:A B C'A' being the base number, 'B' the exponent (power to the base number) and
- * 'C' the modular.Constraints:1 ≤ T ≤ 70,1 ≤ A ≤ 10^5,1 ≤ B ≤ 10^5,1 ≤ C ≤ 10^5
+ * The first line of the input contains integer T denoting the number of test cases. For each test case,
+ * the first line takes an integer n denoting the size of array
+ * i.e number of nodes followed by n-space separated integers denoting the nodes of the tree in level order fashion.
+ * (1<=T<=100；1<=n<=10^5）
  *
- * 输入样例 1
- * 3
- * 3 2 4
- * 10 9 6
- * 450 768 517
+ * 2
+ * 7
+ * 7 6 5 4 3 2 1
+ * 6
+ * 5 6 4 9 2 1
  *
  * 输出
- * In each separate line print the modular exponent of the given numbers in the test case.
- * 输出样例 1
- * 1
- * 4
- * 34
+ * For each test case, the output is the level order sorted tree. ( Note: For every level, we only print distinct elements.)
+ *
+ * 7
+ * 5 6
+ * 1 2 3 4
+ * 5
+ * 4 6
+ * 1 2 9
  *
  *
+ * 递归思想：对于树的每一层，根据层数确定最多需要打印多少个元素，进行排序后打印，然后递归到下一层；
  */
 
 import java.util.Scanner;
-
 class Main {
     public static void main(String[] args) {
         int arrLen;
