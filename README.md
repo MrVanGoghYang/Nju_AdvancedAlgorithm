@@ -1,2 +1,2 @@
 # Nju_AdvancedAlgorithm
-A repository for nju advanced algorithm course OJ problems.
+A repository for NJU advanced algorithm course OJ problems.
