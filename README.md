@@ -1,7 +1,5 @@
 # Nju_AdvancedAlgorithm
-***
 A repository for NJU advanced algorithm course OJ problems.
-***
 ## Problems List
 * 1-5 宠物屋涂色
 * 1-6 序号乘方
