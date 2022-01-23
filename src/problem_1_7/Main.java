@@ -75,37 +75,66 @@ class Main {
         printLevelInOrder(level + 1,tree);
     }
 
+//    private static void quickSort(int[] tree,int left,int right)
+//    {
+//        if(left >= right || left < 0 || right >= tree.length)
+//            return;
+//
+//        int p = left;
+//        int q = right;
+//        int pivort = left;
+//        while(p < q)
+//        {
+//            while (tree[q] >= tree[pivort] && q > 0) {
+//                q--;
+//            }
+//            if (tree[q] < tree[pivort] && q > pivort) {
+//                tree[q] += tree[pivort];
+//                tree[pivort] = tree[q] - tree[pivort];
+//                tree[q] -= tree[pivort];
+//                pivort = q;
+//            }
+//            while (tree[p] <= tree[pivort] && p < pivort) {
+//                p++;
+//            }
+//            if (tree[p] > tree[pivort] && p < pivort) {
+//                tree[p] += tree[pivort];
+//                tree[pivort] = tree[p] - tree[pivort];
+//                tree[p] -= tree[pivort];
+//                pivort = p;
+//            }
+//        }
+//        quickSort(tree,left,pivort - 1);
+//        quickSort(tree,pivort + 1,right);
+//    }
+
     private static void quickSort(int[] tree,int left,int right)
     {
-        if(left >= right || left < 0 || right >= tree.length)
-            return;
-
+        if(left < right)
+        {
+            int pivot = partition(tree,left,right);
+            quickSort(tree,left,pivot - 1);
+            quickSort(tree,pivot + 1,right);
+        }
+    }
+    private static int partition(int[] tree,int left,int right)
+    {
         int p = left;
         int q = right;
-        int pivort = left;
+        int pivort = tree[left];
         while(p < q)
         {
-            while (tree[q] >= tree[pivort] && q > 0) {
+            while (p < q && q >= 0 && tree[q] >= pivort) {
                 q--;
             }
-            if (tree[q] < tree[pivort] && q > pivort) {
-                tree[q] += tree[pivort];
-                tree[pivort] = tree[q] - tree[pivort];
-                tree[q] -= tree[pivort];
-                pivort = q;
-            }
-            while (tree[p] <= tree[pivort] && p < pivort) {
+            tree[p] = tree[q];
+            while (p < q && p < tree.length && tree[p] <= pivort) {
                 p++;
             }
-            if (tree[p] > tree[pivort] && p < pivort) {
-                tree[p] += tree[pivort];
-                tree[pivort] = tree[p] - tree[pivort];
-                tree[p] -= tree[pivort];
-                pivort = p;
-            }
+            tree[q] = tree[p];
         }
-        quickSort(tree,left,pivort - 1);
-        quickSort(tree,pivort + 1,right);
+        tree[p] = pivort;
+        return p;
     }
 }
 
