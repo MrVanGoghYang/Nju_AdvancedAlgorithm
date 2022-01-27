@@ -8,3 +8,5 @@ A repository for NJU advanced algorithm course OJ problems.
 * 1-9 点的凸包
 * 1-10 书本分发
 * 1-11 课程分数
+* 1-12 客流量(无case 一直RE 空main AC)
+* 1-13 和为定值的子数组

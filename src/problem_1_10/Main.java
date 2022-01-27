@@ -27,6 +27,7 @@ For each test case, output a single line containing minimum number of pages each
 113
 
 思路：同Proble 1-5，一模一样。。。
+找出和的最大值最小的连续子数组，给出该最小的最大值
  */
 
 import java.util.Scanner;

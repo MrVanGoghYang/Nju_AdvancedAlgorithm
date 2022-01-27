@@ -48,10 +48,16 @@ of the students. That is You need to swap the whole tuple in a swap and not just
 20 3 4
 
 思路：使用快排，先对第一列进行第一次排序，然后扫描第一次排序的起始位置，对起始位置之间数值相同的部分再对第二列进行第二次排序，递归依次进行。
+     Java自定义排序两种方法：1.类实现Comparable接口并重写compareTo方法； 2.覆盖comparator中的compare方法并使用Collections.sor()排序；
+     https://blog.csdn.net/qq_41550842/article/details/96606437
  */
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
-class Main {
+// 第一种方法 递归对相同区间再排序
+/*
+public class Main {
     public static void main(String[] args) {
         int[][] marks;
         int stuNum;
@@ -163,5 +169,106 @@ class Main {
             }
         }
     }
+}*/
+
+// 第二种方法 使用Java的Comparator或Comparable接口自定义类进行自定义排序
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Student[] students;
+        int stuNum;
+        // Common input process
+        Scanner sc = new Scanner(System.in);
+        int caseNum = sc.nextInt();
+        for (int caseIndex = 0; caseIndex < caseNum; caseIndex++)
+        {
+
+            stuNum = sc.nextInt();
+            students = new Student[stuNum];
+            for (int i = 0; i < stuNum; i++)
+            {
+                students[i] = new Student();
+                students[i].setFirstGrade(sc.nextInt());
+                students[i].setSecondGrade(sc.nextInt());
+                students[i].setThirdGrade(sc.nextInt());
+            }
+            // Process
+            Arrays.sort(students,new definedComparator());
+            for (Student s : students)
+            {
+                System.out.print(s.getFirstGrade() + " " + s.getSecondGrade() + " " + s.getThirdGrade());
+                if (!s.equals(students[stuNum - 1]))
+                    System.out.print("\n");
+            }
+            if (caseIndex != caseNum - 1) System.out.print("\n");
+        }
+    }
 }
 
+class Student
+{
+    int firstGrade;
+    int secondGrade;
+    int thirdGrade;
+    public int getFirstGrade()
+    {
+        return firstGrade;
+    }
+
+    public int getSecondGrade()
+    {
+        return secondGrade;
+    }
+
+    public int getThirdGrade()
+    {
+        return thirdGrade;
+    }
+
+    public void setFirstGrade(int firstGrade)
+    {
+        this.firstGrade = firstGrade;
+    }
+
+    public void setSecondGrade(int secondGrade)
+    {
+        this.secondGrade = secondGrade;
+    }
+
+    public void setThirdGrade(int thirdGrade)
+    {
+        this.thirdGrade = thirdGrade;
+    }
+}
+
+class definedComparator implements Comparator<Student>
+{
+    @Override
+    public int compare(Student i, Student j)
+    {
+        Integer comparator1 = Integer.valueOf(i.getFirstGrade());
+        Integer comparator2 = Integer.valueOf(j.getFirstGrade());
+        int judge = comparator1.compareTo(comparator2);
+        if(judge != 0)
+        {
+            return judge;
+        }
+        else
+        {
+            comparator1 = Integer.valueOf(i.getSecondGrade());
+            comparator2 = Integer.valueOf(j.getSecondGrade());
+            judge = comparator1.compareTo(comparator2);
+            if(judge != 0)
+            {
+                return -judge;
+            }
+            else
+            {
+                comparator1 = Integer.valueOf(i.getThirdGrade());
+                comparator2 = Integer.valueOf(j.getThirdGrade());
+                return comparator1.compareTo(comparator2);
+            }
+        }
+    }
+}
