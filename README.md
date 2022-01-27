@@ -10,3 +10,6 @@ A repository for NJU advanced algorithm course OJ problems.
 * 1-11 课程分数
 * 1-12 客流量(无case 一直RE 空main AC)
 * 1-13 和为定值的子数组
+* 1-14 合并数组
+* 1-15 最小交换次数
+* 1-16 插入排序
