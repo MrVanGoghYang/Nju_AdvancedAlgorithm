@@ -52,6 +52,7 @@ class Main {
                 System.out.print("\n");
         }
     }
+
     private static void printLevelInOrder(int level,int[] tree)
     {
         int left = (1 << level) - 1;
@@ -74,39 +75,6 @@ class Main {
         }
         printLevelInOrder(level + 1,tree);
     }
-
-//    private static void quickSort(int[] tree,int left,int right)
-//    {
-//        if(left >= right || left < 0 || right >= tree.length)
-//            return;
-//
-//        int p = left;
-//        int q = right;
-//        int pivort = left;
-//        while(p < q)
-//        {
-//            while (tree[q] >= tree[pivort] && q > 0) {
-//                q--;
-//            }
-//            if (tree[q] < tree[pivort] && q > pivort) {
-//                tree[q] += tree[pivort];
-//                tree[pivort] = tree[q] - tree[pivort];
-//                tree[q] -= tree[pivort];
-//                pivort = q;
-//            }
-//            while (tree[p] <= tree[pivort] && p < pivort) {
-//                p++;
-//            }
-//            if (tree[p] > tree[pivort] && p < pivort) {
-//                tree[p] += tree[pivort];
-//                tree[pivort] = tree[p] - tree[pivort];
-//                tree[p] -= tree[pivort];
-//                pivort = p;
-//            }
-//        }
-//        quickSort(tree,left,pivort - 1);
-//        quickSort(tree,pivort + 1,right);
-//    }
 
     private static void quickSort(int[] tree,int left,int right)
     {
