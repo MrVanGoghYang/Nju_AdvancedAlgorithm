@@ -1,5 +1,5 @@
 package problem_1_17;
-/*
+/**
 冒泡排序
 描述
 实现冒泡排序。
@@ -13,7 +13,7 @@ package problem_1_17;
 输出样例 1
 3 3 9 12 24 29 34 49 51 56 78 84 100
 思路：
- */
+**/
 import java.util.Arrays;
 import java.util.Scanner;
 

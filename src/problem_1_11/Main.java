@@ -1,5 +1,5 @@
 package problem_1_11;
-/*
+/**
 课程分数
 描述
 You are provided with marks of N students. A student's Marks in Physics, Chemistry and Maths are provided to you.

@@ -1,5 +1,5 @@
 package problem_1_19;
-/*
+/***
 非递归快排
 描述
 快速排序的核心思想是使用元素的值对数组进行划分。实现其非递归方案。
@@ -14,7 +14,7 @@ package problem_1_19;
 3 3 9 12 24 29 34 49 51 56 78 84 100
 思路: WDNMD输入不给case数了是吧，都是排序题你还改Input格式？？！！！给爷百思不得其解了半个多小时，玩阴的玩不起，焯！！！
      递归改迭代：使用栈，栈非空时：出栈左右index,然后partition，然后将新的左右index进栈。注意进栈和出栈的顺序相反。
- */
+***/
 
 import java.util.Scanner;
 import java.util.Stack;

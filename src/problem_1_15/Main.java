@@ -1,5 +1,5 @@
 package problem_1_15;
-/*
+/**
 最小交换次数
 描述
 Given an array of N distinct elementsA[ ], find the minimum number of swaps required to sort the array.Your are required

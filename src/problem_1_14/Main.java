@@ -1,5 +1,5 @@
 package problem_1_14;
-/*
+/**
 合并数组
 描述
 Given K sorted arrays arranged in a form of a matrix, your task is to merge them. You need to complete mergeKArrays function

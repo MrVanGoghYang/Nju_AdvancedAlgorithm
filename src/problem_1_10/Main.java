@@ -1,5 +1,5 @@
 package problem_1_10;
-/*
+/**
 书本分发
 描述
 You are given N number of books. Every ith book has Pi number of pages. You have to allocate books to M number of students.

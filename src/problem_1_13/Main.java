@@ -1,5 +1,5 @@
 package problem_1_13;
-/*
+/**
 和为定值的子数组
 描述
 Given an array A of size N, find all combination of four elements in the array whose sum is equal to a given value K.
