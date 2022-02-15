@@ -19,3 +19,4 @@ A repository for NJU advanced algorithm course OJ problems.
 * 1-20 非递归合并排序
 * 1-21 倒置个数
 * 1-22 实现Shell排序
+* 1-23 棋盘覆盖问题
