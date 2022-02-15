@@ -17,3 +17,5 @@ A repository for NJU advanced algorithm course OJ problems.
 * 1-18 计数排序
 * 1-19 非递归快排
 * 1-20 非递归合并排序
+* 1-21 倒置个数
+* 1-22 实现Shell排序
