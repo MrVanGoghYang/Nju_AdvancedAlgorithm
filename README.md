@@ -1,6 +1,7 @@
 # Nju_AdvancedAlgorithm
 A repository for NJU advanced algorithm course OJ problems.
 ## Problems List
+### 一、排序与分治
 * 1-5 宠物屋涂色
 * 1-6 序号乘方
 * 1-7 二叉树
@@ -21,3 +22,6 @@ A repository for NJU advanced algorithm course OJ problems.
 * 1-22 实现Shell排序
 * 1-23 棋盘覆盖问题
 * 1-24 分治法解最近对问题
+* 1-25 按照数值个数排序
+### 二、查找与图
+* 2-1 拓扑排序解的个数

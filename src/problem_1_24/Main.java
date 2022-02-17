@@ -22,6 +22,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
+// 用于对输入和结果的元素类型为Integer[]与Float[]的集合排序
 class comparator implements Comparator<Object[]>
 {
     @Override
@@ -88,6 +89,13 @@ class Main
         }
     }
 
+    /**
+     * 递归求在points从beginIndex到endIndex的区域内的距离最小的点对
+     * @param points 按照x递增排序的点的坐标数组
+     * @param beginIndex 该区域最左端点在points中的下标
+     * @param endIndex 该区域最右端点在points中的下标
+     * @return 所找到的点对List
+     */
     private static ArrayList<Integer[]> getMinDisPair(Float[][] points, int beginIndex, int endIndex)
     {
         ArrayList<Integer[]> res = new ArrayList<>();
@@ -149,12 +157,12 @@ class Main
         }
         return res;
     }
-
+    // 计算Points中的第i个点与第j个点之间的直线距离
     private static float calDis(Float[][] points, int i, int j)
     {
         return (float) Math.sqrt(Math.pow(points[i][0] - points[j][0], 2) + Math.pow(points[i][1] - points[j][1], 2));
     }
-
+    // 将float型的a转化为String，若小数点后均为0则直接返回int串否则返回float串，即小数点后若都为0则不输出
     private static String convert2Str(float a)
     {
         if(Math.round(a) == a)
