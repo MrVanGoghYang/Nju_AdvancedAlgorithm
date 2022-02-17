@@ -20,3 +20,4 @@ A repository for NJU advanced algorithm course OJ problems.
 * 1-21 倒置个数
 * 1-22 实现Shell排序
 * 1-23 棋盘覆盖问题
+* 1-24 分治法解最近对问题

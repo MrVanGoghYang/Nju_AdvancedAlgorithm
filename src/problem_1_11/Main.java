@@ -48,7 +48,7 @@ of the students. That is You need to swap the whole tuple in a swap and not just
 20 3 4
 
 思路：使用快排，先对第一列进行第一次排序，然后扫描第一次排序的起始位置，对起始位置之间数值相同的部分再对第二列进行第二次排序，递归依次进行。
-     Java自定义排序两种方法：1.类实现Comparable接口并重写compareTo方法； 2.覆盖comparator中的compare方法并使用Collections.sor()排序；
+     Java自定义排序两种方法：1.类实现Comparable接口并重写compareTo方法； 2.覆盖comparator中的compare方法并使用Collections.sort()排序；
      https://blog.csdn.net/qq_41550842/article/details/96606437
  */
 
