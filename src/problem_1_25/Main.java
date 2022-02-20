@@ -18,6 +18,7 @@ package problem_1_25;
  */
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.*;
 class Main
@@ -41,7 +42,7 @@ class Main
     {
         // Common input process
         //Scanner sc = new Scanner(System.in);
-        Scanner sc = new Scanner(new File("C:\\Users\\97267\\Desktop\\input.txt"));
+        Scanner sc = new Scanner(new FileInputStream("C:\\Users\\97267\\Desktop\\input.txt"));
         int caseNum = sc.nextInt();
         for(int caseIndex = 0; caseIndex < caseNum; caseIndex++)
         {

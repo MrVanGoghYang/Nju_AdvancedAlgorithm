@@ -25,3 +25,6 @@ A repository for NJU advanced algorithm course OJ problems.
 * 1-25 按照数值个数排序
 ### 二、查找与图
 * 2-1 拓扑排序解的个数
+* 2-2 广度优先遍历图
+* 2-3 深度优先遍历图（递归、迭代）
+* 
