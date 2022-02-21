@@ -27,4 +27,9 @@ A repository for NJU advanced algorithm course OJ problems.
 * 2-1 拓扑排序解的个数
 * 2-2 广度优先遍历图
 * 2-3 深度优先遍历图（递归、迭代）
-* 
+* 2-4 分配问题
+* 2-5 Searching_4
+* 2-6 按照另一个数组排序
+* 2-7 Searching_3
+* 2-8 有9个因数的数
+* 2-9 漆狗屋（同1-5宠物屋涂色）

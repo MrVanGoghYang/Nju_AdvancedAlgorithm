@@ -146,6 +146,7 @@ class Main
         while (!stack.isEmpty())
         {
             Node top = stack.pop();
+            // 当前元素的depth变小，则说明该顶点为回溯后的点，把当前访问路径上深度更深的全部置0表示被回溯过
             if(top.getDepth() < maxDep)
             {
                 for(int i = 0; i < graph.length; i++)
@@ -154,11 +155,14 @@ class Main
                         onPath[i] = 0;
                 }
             }
+            // 记录当前访问路径上各个点的访问深度
             onPath[top.getId()] = top.getDepth();
             visited[top.getId()] = 1;
             maxDep = maxDep > top.getDepth() ? maxDep : top.getDepth();
+            // 对于所有邻接点
             for(int i = 0; i < graph.length; i++)
             {
+                // 如果未在路径上则入栈，注意入栈顶点可重复因为当有环的时候同一个顶点会在不同路径访问到产生不同的深度，全部邻接点都要入栈
                 if(graph[top.getId()][i] == 1 && onPath[i] == 0)
                 {
                     stack.push(new Node(i, top.getDepth() + 1));
@@ -167,8 +171,6 @@ class Main
             }
         }
     }
-
-
 
     private static int findIdxByChar(char[] arr, char c)
     {
