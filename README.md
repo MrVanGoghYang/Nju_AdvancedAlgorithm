@@ -40,5 +40,8 @@ A repository for NJU advanced algorithm course OJ problems.
 * 3-4 能否成环
 * 3-5 数字重组整除问题
 * 3-6 牛的繁殖问题
+* 3-7 和最大的连续降序字符
+* 3-8 距离问题
+* 3-9 字符串匹配问题
 * 3-10 整除查询
 * 3-11 对称子字符串
