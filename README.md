@@ -45,3 +45,6 @@ A repository for NJU advanced algorithm course OJ problems.
 * 3-9 字符串匹配问题
 * 3-10 整除查询
 * 3-11 对称子字符串
+### 四、动态规划
+* 4-1 最小化初始点
+* 4-2 矩阵计算
