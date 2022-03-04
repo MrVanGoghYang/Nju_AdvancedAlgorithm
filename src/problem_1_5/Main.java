@@ -24,7 +24,8 @@ package problem_1_5;
  * 二分查找  搜索空间为 [max,sum]，只需要找到最小值即可，那么从可能的取值范围中找。对于某个值k（如初始为中间值），看是否有划分方法可以满足
  * 划分之后各个子数组和的最大值在该值范围内（即<k）。若存在，则这个值较大，继续递减；若不存在，则说明上一个值已经是最小。
  */
-import java.util.Scanner;
+import java.util.*;
+
 class Main {
     public static void main(String[] args) {
         int divideNum = 0;
@@ -90,4 +91,5 @@ class Main {
         }
         return count <= divideNum;
     }
+
 }
